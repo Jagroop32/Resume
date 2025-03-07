@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagroop Singh - Multi-Skilled Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: #eef2f7;
+            color: #1f2a44;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1f2a44;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 60px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #34c759;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?industry,professional') no-repeat center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(31, 42, 68, 0.8), rgba(52, 199, 89, 0.6));
+            z-index: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 5em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.8em;
+            font-weight: 300;
+            margin: 15px 0;
+        }
+
+        .hero .cta {
+            display: inline-block;
+            padding: 15px 50px;
+            background: #34c759;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .hero .cta:hover {
+            background: #2ca844;
+            transform: translateY(-5px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        section {
+            background: #fff;
+            padding: 60px;
+            margin: 50px 0;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-15px);
+        }
+
+        h2 {
+            color: #1f2a44;
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: #34c759;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+        }
+
+        /* Summary */
+        #summary p {
+            font-size: 1.3em;
+            color: #555;
+        }
+
+        /* Certifications */
+        #certifications ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        #certifications li {
+            font-size: 1.2em;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        #certifications li::before {
+            content: "🏅";
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 30px;
+        }
+
+        .education-item h3 {
+            font-size: 1.8em;
+            color: #1f2a44;
+        }
+
+        .education-item p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #34c759;
+        }
+
+        .job {
+            position: relative;
+            margin-bottom: 50px;
+            padding: 20px;
+            background: #f9fafc;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .job::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            background: #34c759;
+            border-radius: 50%;
+            border: 4px solid #fff;
+        }
+
+        .job h3 {
+            font-size: 1.9em;
+            color: #1f2a44;
+        }
+
+        .job p {
+            font-size: 1.2em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .job ul li {
+            font-size: 1.1em;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .job ul li::before {
+            content: "✔";
+            color: #34c759;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Skills Progress */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-item span {
+            font-size: 1.2em;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: #34c759;
+            width: 0;
+            animation: fillBar 1.5s ease forwards;
+        }
+
+        @keyframes fillBar {
+            to { width: var(--progress-width); }
+        }
+
+        /* Languages */
+        #languages ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #languages li {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background: #34c759;
+            color: #fff;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2a44;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            margin-top: 80px;
+        }
+
+        footer a {
+            color: #34c759;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 25px;
+                padding: 20px 0;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .hero p {
+                font-size: 1.4em;
+            }
+
+            section {
+                padding: 40px;
+            }
+
+            h2 {
+                font-size: 2.2em;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .job::before {
+                left: -26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#languages">Languages</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Jagroop Singh</h1>
+            <p>Multi-Skilled Expert in Transportation, Security & Agriculture</p>
+            <p>Scarborough, ON | <a href="mailto:singhjagroopcanada2@gmail.com" style="color: #34c759;">singh123@gmail.com</a></p>
+            <a href="#summary" class="cta">Explore My Expertise</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section id="summary">
+            <h2>Who I Am</h2>
+            <p>A highly skilled and adaptable professional with a proven track record in transportation, security, machine operation, warehouse logistics, and agriculture. From managing farm operations in Punjab to securing urban environments in Toronto, I bring a unique blend of hands-on expertise, safety-first mindset, and operational excellence. Certified with an AZ License, OACP Certificate, and more, I thrive in optimizing workflows and enhancing workplace safety.</p>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications & Licenses</h2>
+            <ul>
+                <li>AZ License (Ontario)</li>
+                <li>Ontario Association of Chiefs of Police (OACP) Certificate</li>
+                <li>Forklift License – 4+ years of experience</li>
+                <li>WHMIS & OSHA Certification</li>
+                <li>CPR & First Aid Certification – 2 years of experience</li>
+                <li>Traffic Control Certification</li>
+                <li>Ontario Security Guard License</li>
+                <li>Ontario Class GZ Driver’s License – 2 years of experience</li>
+                <li>Municipal Law Enforcement Officer (MLEO) Certificate</li>
+                <li>Air Brake Endorsement</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Niagara College Toronto</h3>
+                <p>Diploma in Business | Sept 2022 – Apr 2024</p>
+            </div>
+            <div class="education-item">
+                <h3>SBBS International School, India</h3>
+                <p>11th & 12th Grade (Commerce) | Studied Arts in India</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Journey</h2>
+            <div class="timeline">
+                <div class="job">
+                    <h3>Security Guard – SMS Security, Toronto, ON</h3>
+                    <p>Sep 2023 – Present</p>
+                    <ul>
+                        <li>Ensured safety and security of premises with surveillance and patrols</li>
+                        <li>Managed events and delivered exceptional customer service</li>
+                        <li>Improved emergency response times by 15%</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Machine Operator – Eco Manufacturing Inc., Scarborough, ON</h3>
+                    <p>Nov 2022 – Aug 2023</p>
+                    <ul>
+                        <li>Operated machinery to boost productivity and reduce downtime</li>
+                        <li>Streamlined workflows with team coordination</li>
+                        <li>Maintained equipment and tracked production using Excel</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Farm Worker & Manager – Family-Owned Farm, Punjab, India</h3>
+                    <p>Lifelong Experience</p>
+                    <ul>
+                        <li>Managed crop cultivation, irrigation, and harvesting</li>
+                        <li>Cared for livestock and maintained farm machinery</li>
+                        <li>Implemented sustainable practices for better yields</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Key Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span>Transportation & Logistics</span>
+                    <div class="progress-bar"><div class="progress" style="--progress-width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Security & Law Enforcement</span>
+                    <div class="progress-bar"><div class="progress" style="--progress-width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Machinery Operation</span>
+                    <div class="progress-bar"><div class="progress" style="--progress-width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Agriculture & Farm Management</span>
+                    <div class="progress-bar"><div class="progress" style="--progress-width: 95%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Safety & Compliance</span>
+                    <div class="progress-bar"><div class="progress" style="--progress-width: 90%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>English (Proficient)</li>
+                <li>Punjabi (Fluent)</li>
+                <li>Hindi (Fluent)</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Jagroop Singh | <a href="mailto:singhjagroopcanada2@gmail.com">Let’s Connect</a> | Built for Excellence</p>
+    </footer>
+</body>
+</html>
