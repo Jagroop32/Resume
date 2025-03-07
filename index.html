@@ -23,34 +23,58 @@
         /* Navigation */
         nav {
             background: #1f2a44;
-            padding: 20px 0;
+            padding: 20px;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
-        nav ul {
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: #34c759;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
             list-style: none;
             gap: 60px;
         }
 
-        nav ul li a {
+        .nav-menu li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        nav ul li a:hover {
+        .nav-menu li a:hover {
             color: #34c759;
             transform: scale(1.1);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2em;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
 
         /* Hero Section */
@@ -79,18 +103,19 @@
         .hero-content {
             z-index: 2;
             padding: 30px;
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 5em;
+            font-size: 4.5em;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             animation: fadeInDown 1s ease;
         }
 
         .hero p {
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: 300;
             margin: 15px 0;
         }
@@ -102,7 +127,7 @@
             color: #fff;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 600;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, background 0.3s;
@@ -117,25 +142,25 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 100px 20px;
+            padding: 80px 20px;
         }
 
         section {
             background: #fff;
             padding: 60px;
-            margin: 50px 0;
+            margin: 40px 0;
             border-radius: 25px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
         section:hover {
-            transform: translateY(-15px);
+            transform: translateY(-10px);
         }
 
         h2 {
             color: #1f2a44;
-            font-size: 2.8em;
+            font-size: 2.5em;
             font-weight: 700;
             margin-bottom: 30px;
             position: relative;
@@ -143,29 +168,29 @@
 
         h2::after {
             content: '';
-            width: 80px;
+            width: 70px;
             height: 5px;
             background: #34c759;
             position: absolute;
-            bottom: -15px;
+            bottom: -10px;
             left: 0;
         }
 
         /* Summary */
         #summary p {
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #555;
         }
 
         /* Certifications */
         #certifications ul {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
         #certifications li {
-            font-size: 1.2em;
+            font-size: 1.1em;
             padding-left: 30px;
             position: relative;
         }
@@ -179,16 +204,16 @@
 
         /* Education */
         .education-item {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .education-item h3 {
-            font-size: 1.8em;
+            font-size: 1.7em;
             color: #1f2a44;
         }
 
         .education-item p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #666;
         }
 
@@ -210,7 +235,7 @@
 
         .job {
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             padding: 20px;
             background: #f9fafc;
             border-radius: 15px;
@@ -230,19 +255,19 @@
         }
 
         .job h3 {
-            font-size: 1.9em;
+            font-size: 1.8em;
             color: #1f2a44;
         }
 
         .job p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #777;
             margin-bottom: 15px;
         }
 
         .job ul li {
-            font-size: 1.1em;
-            padding-left: 30px;
+            font-size: 1em;
+            padding-left: 25px;
             position: relative;
         }
 
@@ -256,8 +281,8 @@
         /* Skills Progress */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
 
         .skill-item {
@@ -265,7 +290,7 @@
         }
 
         .skill-item span {
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: 500;
             display: block;
             margin-bottom: 10px;
@@ -273,8 +298,8 @@
 
         .progress-bar {
             background: #e0e0e0;
-            height: 10px;
-            border-radius: 5px;
+            height: 8px;
+            border-radius: 4px;
             overflow: hidden;
         }
 
@@ -293,15 +318,15 @@
         #languages ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
         }
 
         #languages li {
-            font-size: 1.2em;
-            padding: 10px 20px;
+            font-size: 1.1em;
+            padding: 8px 20px;
             background: #34c759;
             color: #fff;
-            border-radius: 25px;
+            border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
@@ -325,39 +350,67 @@
             background: #1f2a44;
             color: #fff;
             text-align: center;
-            padding: 40px;
-            font-size: 1.2em;
-            margin-top: 80px;
+            padding: 40px 20px;
+            font-size: 1.1em;
+            margin-top: 60px;
         }
 
         footer a {
             color: #34c759;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s ease;
         }
 
-        /* Responsive */
+        footer a:hover {
+            color: #2ca844;
+        }
+
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            nav ul {
+            .nav-menu {
+                display: none;
                 flex-direction: column;
-                gap: 25px;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #1f2a44;
                 padding: 20px 0;
+                gap: 20px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
             }
 
             .hero h1 {
-                font-size: 3em;
+                font-size: 2.8em;
             }
 
             .hero p {
-                font-size: 1.4em;
+                font-size: 1.2em;
+            }
+
+            .hero .cta {
+                padding: 12px 35px;
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 60px 15px;
             }
 
             section {
-                padding: 40px;
+                padding: 40px 20px;
             }
 
             h2 {
-                font-size: 2.2em;
+                font-size: 2em;
             }
 
             .timeline::before {
@@ -367,20 +420,50 @@
             .job::before {
                 left: -26px;
             }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 30px 15px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .job h3 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#languages">Languages</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="#" class="nav-brand">Jagroop Singh</a>
+            <button class="hamburger">☰</button>
+            <ul class="nav-menu">
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#languages">Languages</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -388,7 +471,7 @@
         <div class="hero-content">
             <h1>Jagroop Singh</h1>
             <p>Multi-Skilled Expert in Transportation, Security & Agriculture</p>
-            <p>Scarborough, ON | <a href="mailto:singhjagroopcanada2@gmail.com" style="color: #34c759;">singh123@gmail.com</a></p>
+            <p>Scarborough, ON | +1 (437) 000-0000 | <a href="mailto:singh123@gmail.com" style="color: #34c759;">singh123@gmail.com</a></p>
             <a href="#summary" class="cta">Explore My Expertise</a>
         </div>
     </div>
@@ -499,7 +582,18 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Jagroop Singh | <a href="mailto:singhjagroopcanada2@gmail.com">Let’s Connect</a> | Built for Excellence</p>
+        <p>© 2025 Jagroop Singh | <a href="mailto:singh123@gmail.com">Let’s Connect</a> | Built for Excellence</p>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+    </script>
 </body>
 </html>
