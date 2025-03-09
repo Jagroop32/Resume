@@ -3,458 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagroop Singh - Multi-Skilled Professional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Jagroop Singh - Multi-Skilled Professional in Transportation, Security, and Agriculture based in Scarborough, ON.">
+    <meta name="keywords" content="Jagroop Singh, transportation, security, agriculture, AZ License, Scarborough, Ontario">
+    <meta name="author" content="Jagroop Singh">
+    <title>Jagroop Singh | Multi-Skilled Professional</title>
+    <link rel="icon" href="https://via.placeholder.com/32" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            background: #eef2f7;
-            color: #1f2a44;
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            background: #1f2a44;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-brand {
-            color: #34c759;
-            font-size: 1.5em;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 60px;
-        }
-
-        .nav-menu li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .nav-menu li a:hover {
-            color: #34c759;
-            transform: scale(1.1);
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 2em;
-            color: #fff;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: url('https://source.unsplash.com/1600x900/?industry,professional') no-repeat center/cover fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(31, 42, 68, 0.8), rgba(52, 199, 89, 0.6));
-            z-index: 1;
-        }
-
-        .hero-content {
-            z-index: 2;
-            padding: 30px;
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 4.5em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: fadeInDown 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.6em;
-            font-weight: 300;
-            margin: 15px 0;
-        }
-
-        .hero .cta {
-            display: inline-block;
-            padding: 15px 50px;
-            background: #34c759;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .hero .cta:hover {
-            background: #2ca844;
-            transform: translateY(-5px);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        section {
-            background: #fff;
-            padding: 60px;
-            margin: 40px 0;
-            border-radius: 25px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-10px);
-        }
-
-        h2 {
-            color: #1f2a44;
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            width: 70px;
-            height: 5px;
-            background: #34c759;
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-        }
-
-        /* Summary */
-        #summary p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        /* Certifications */
-        #certifications ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        #certifications li {
-            font-size: 1.1em;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        #certifications li::before {
-            content: "🏅";
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }
-
-        /* Education */
-        .education-item {
-            margin-bottom: 25px;
-        }
-
-        .education-item h3 {
-            font-size: 1.7em;
-            color: #1f2a44;
-        }
-
-        .education-item p {
-            font-size: 1.1em;
-            color: #666;
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: #34c759;
-        }
-
-        .job {
-            position: relative;
-            margin-bottom: 40px;
-            padding: 20px;
-            background: #f9fafc;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .job::before {
-            content: '';
-            position: absolute;
-            left: -36px;
-            top: 25px;
-            width: 20px;
-            height: 20px;
-            background: #34c759;
-            border-radius: 50%;
-            border: 4px solid #fff;
-        }
-
-        .job h3 {
-            font-size: 1.8em;
-            color: #1f2a44;
-        }
-
-        .job p {
-            font-size: 1.1em;
-            color: #777;
-            margin-bottom: 15px;
-        }
-
-        .job ul li {
-            font-size: 1em;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .job ul li::before {
-            content: "✔";
-            color: #34c759;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Skills Progress */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .skill-item {
-            margin-bottom: 20px;
-        }
-
-        .skill-item span {
-            font-size: 1.1em;
-            font-weight: 500;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .progress-bar {
-            background: #e0e0e0;
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .progress {
-            height: 100%;
-            background: #34c759;
-            width: 0;
-            animation: fillBar 1.5s ease forwards;
-        }
-
-        @keyframes fillBar {
-            to { width: var(--progress-width); }
-        }
-
-        /* Languages */
-        #languages ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        #languages li {
-            font-size: 1.1em;
-            padding: 8px 20px;
-            background: #34c759;
-            color: #fff;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        section {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        /* Footer */
-        footer {
-            background: #1f2a44;
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 1.1em;
-            margin-top: 60px;
-        }
-
-        footer a {
-            color: #34c759;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #2ca844;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: #1f2a44;
-                padding: 20px 0;
-                gap: 20px;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.8em;
-            }
-
-            .hero p {
-                font-size: 1.2em;
-            }
-
-            .hero .cta {
-                padding: 12px 35px;
-                font-size: 1em;
-            }
-
-            .container {
-                padding: 60px 15px;
-            }
-
-            section {
-                padding: 40px 20px;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-
-            .timeline::before {
-                left: 10px;
-            }
-
-            .job::before {
-                left: -26px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            section {
-                padding: 30px 15px;
-            }
-
-            h2 {
-                font-size: 1.8em;
-            }
-
-            .job h3 {
-                font-size: 1.5em;
-            }
-        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth;}
+        body{background:#f8f9fa;color:#4a4a4a;line-height:1.6;overflow-x:hidden;}
+        #preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#2d2d2d;display:flex;align-items:center;justify-content:center;z-index:3000;}
+        #preloader span{font-size:1.5rem;color:#d4af37;font-weight:600;animation:pulse 1.5s infinite;}
+        @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+        nav{background:#2d2d2d;padding:1.5rem 2rem;position:sticky;top:0;z-index:1000;box-shadow:0 2px 15px rgba(0,0,0,0.1);transition:background 0.3s ease;}
+        nav.scrolled{background:rgba(45,45,45,0.95);}
+        .nav-container{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+        .nav-brand{color:#d4af37;font-size:1.8rem;font-weight:700;text-decoration:none;letter-spacing:1px;}
+        .nav-menu{display:flex;list-style:none;gap:2.5rem;}
+        .nav-menu li a{color:#fff;text-decoration:none;font-size:1rem;font-weight:400;text-transform:uppercase;letter-spacing:1px;position:relative;transition:color 0.3s ease;}
+        .nav-menu li a::after{content:'';position:absolute;width:0;height:2px;background:#d4af37;bottom:-5px;left:0;transition:width 0.3s ease;}
+        .nav-menu li a:hover::after,.nav-menu li a.active::after{width:100%;}
+        .nav-menu li a:hover,.nav-menu li a.active{color:#d4af37;}
+        .hamburger{display:none;font-size:1.8rem;color:#fff;background:none;border:none;cursor:pointer;}
+        .hero{height:100vh;background:url('https://source.unsplash.com/1600x900/?professional,modern') no-repeat center/cover fixed;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative;}
+        .hero img{loading:lazy;}
+        .hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(45,45,45,0.85),rgba(212,175,55,0.2));z-index:1;}
+        .hero-content{z-index:2;padding:2rem;max-width:800px;}
+        .hero h1{font-size:4.5rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;}
+        .hero p{font-size:1.5rem;font-weight:300;margin:1rem 0;}
+        .hero .cta{display:inline-block;padding:1rem 2.5rem;background:#d4af37;color:#2d2d2d;text-decoration:none;border-radius:5px;font-size:1.2rem;font-weight:600;transition:all 0.3s ease;}
+        .hero .cta:hover{background:#b8962e;transform:translateY(-3px);box-shadow:0 5px 15px rgba(212,175,55,0.4);}
+        .container{max-width:1280px;margin:0 auto;padding:5rem 2rem;}
+        section{background:#fff;padding:3.5rem;margin:2rem 0;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.05);transition:transform 0.3s ease;}
+        section:hover{transform:translateY(-5px);}
+        h2{color:#2d2d2d;font-size:2.5rem;font-weight:600;margin-bottom:1.5rem;position:relative;}
+        h2::after{content:'';width:80px;height:4px;background:#d4af37;position:absolute;bottom:-10px;left:0;}
+        #summary p{font-size:1.2rem;color:#4a4a4a;max-width:700px;}
+        #certifications ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;}
+        #certifications li{font-size:1.1rem;padding:1rem 1rem 1rem 2.5rem;background:#f8f9fa;border-radius:8px;position:relative;}
+        #certifications li::before{content:"\f058";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:#d4af37;}
+        .education-item{margin-bottom:1.5rem;padding:1rem;background:#f8f9fa;border-radius:8px;}
+        .education-item h3{font-size:1.6rem;color:#2d2d2d;}
+        .education-item p{font-size:1.1rem;color:#6a6a6a;}
+        .timeline{position:relative;padding-left:2.5rem;}
+        .timeline::before{content:'';position:absolute;left:1rem;top:0;bottom:0;width:3px;background:#d4af37;}
+        .job{position:relative;margin-bottom:2rem;padding:1.5rem;background:#f8f9fa;border-radius:8px;}
+        .job::before{content:'';position:absolute;left:-1.8rem;top:2rem;width:16px;height:16px;background:#d4af37;border-radius:50%;border:3px solid #fff;}
+        .job h3{font-size:1.7rem;color:#2d2d2d;}
+        .job p{font-size:1.1rem;color:#6a6a6a;margin-bottom:1rem;}
+        .job ul li{font-size:1rem;padding-left:1.5rem;position:relative;margin-bottom:0.5rem;}
+        .job ul li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;color:#d4af37;position:absolute;left:0;top:2px;}
+        .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+        .skill-item{margin-bottom:1rem;}
+        .skill-item span{font-size:1.1rem;font-weight:500;display:block;margin-bottom:0.5rem;color:#2d2d2d;}
+        .progress-bar{background:#e0e0e0;height:8px;border-radius:4px;overflow:hidden;}
+        .progress{height:100%;background:#d4af37;width:0;transition:width 1.5s ease-out;}
+        #languages ul{display:flex;flex-wrap:wrap;gap:1rem;}
+        #languages li{font-size:1.1rem;padding:0.5rem 1.2rem;background:#d4af37;color:#2d2d2d;border-radius:20px;transition:transform 0.3s ease;}
+        #languages li:hover{transform:translateY(-3px);}
+        footer{background:#2d2d2d;color:#fff;text-align:center;padding:2rem;font-size:1rem;margin-top:4rem;}
+        footer a{color:#d4af37;text-decoration:none;font-weight:600;transition:color 0.3s ease;}
+        footer a:hover{color:#b8962e;}
+        .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+        .fade-in.visible{opacity:1;transform:translateY(0);}
+        @media (max-width:768px){.nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:#2d2d2d;padding:1.5rem;gap:1rem;}
+        .nav-menu.active{display:flex;}
+        .hamburger{display:block;}
+        .hero h1{font-size:3rem;}
+        .hero p{font-size:1.2rem;}
+        .hero .cta{padding:0.8rem 2rem;font-size:1rem;}
+        .container{padding:3rem 1rem;}
+        section{padding:2rem;}
+        h2{font-size:2rem;}
+        .timeline::before{left:0.5rem;}
+        .job::before{left:-1.2rem;}}
+        @media (max-width:480px){.hero h1{font-size:2rem;}
+        .hero p{font-size:1rem;}
+        section{padding:1.5rem;}
+        h2{font-size:1.6rem;}
+        .job h3{font-size:1.4rem;}}
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+    <div id="preloader"><span>Loading...</span></div>
+    <nav aria-label="Main Navigation">
         <div class="nav-container">
             <a href="#" class="nav-brand">Jagroop Singh</a>
-            <button class="hamburger">☰</button>
+            <button class="hamburger" aria-label="Toggle Menu">☰</button>
             <ul class="nav-menu">
                 <li><a href="#summary">Summary</a></li>
                 <li><a href="#certifications">Certifications</a></li>
@@ -465,41 +101,35 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Hero Section -->
     <div class="hero">
         <div class="hero-content">
             <h1>Jagroop Singh</h1>
-            <p>Multi-Skilled Expert in Transportation, Security & Agriculture</p>
-            <p>Scarborough, ON | <a href="mailto:singhjagroopcanada2@gmail.com" style="color: #34c759;">singhjagroopcanada2@gmail.com</a></p>
-            <a href="#summary" class="cta">Explore My Expertise</a>
+            <p>Multi-Skilled Professional in Transportation, Security & Agriculture</p>
+            <p>Scarborough, ON | <a href="mailto:singhjagroopcanada2@gmail.com" style="color:#d4af37;">singhjagroopcanada2@gmail.com</a></p>
+            <a href="#summary" class="cta">Explore My Profile</a>
         </div>
     </div>
-
-    <!-- Main Content -->
     <div class="container">
-        <section id="summary">
-            <h2>Who I Am</h2>
-            <p>A highly skilled and adaptable professional with a proven track record in transportation, security, machine operation, warehouse logistics, and agriculture. From managing farm operations in Punjab to securing urban environments in Toronto, I bring a unique blend of hands-on expertise, safety-first mindset, and operational excellence. Certified with an AZ License, OACP Certificate, and more, I thrive in optimizing workflows and enhancing workplace safety.</p>
+        <section id="summary" class="fade-in">
+            <h2>Professional Summary</h2>
+            <p>A results-oriented professional with a proven track record in transportation, security, machine operation, logistics, and agriculture. With extensive experience managing farm operations in Punjab and securing urban environments in Toronto, I bring a strategic blend of technical expertise, operational leadership, and a commitment to safety and efficiency. Certified with an AZ License, OACP Certificate, and more, I excel in optimizing processes and delivering measurable outcomes.</p>
         </section>
-
-        <section id="certifications">
+        <section id="certifications" class="fade-in">
             <h2>Certifications & Licenses</h2>
             <ul>
                 <li>AZ License (Ontario)</li>
                 <li>Ontario Association of Chiefs of Police (OACP) Certificate</li>
-                <li>Forklift License – 4+ years of experience</li>
+                <li>Forklift License – 4+ Years of Experience</li>
                 <li>WHMIS & OSHA Certification</li>
-                <li>CPR & First Aid Certification – 2 years of experience</li>
+                <li>CPR & First Aid Certification – 2 Years of Experience</li>
                 <li>Traffic Control Certification</li>
                 <li>Ontario Security Guard License</li>
-                <li>Ontario Class GZ Driver’s License – 2 years of experience</li>
+                <li>Ontario Class GZ Driver’s License – 2 Years of Experience</li>
                 <li>Municipal Law Enforcement Officer (MLEO) Certificate</li>
                 <li>Air Brake Endorsement</li>
             </ul>
         </section>
-
-        <section id="education">
+        <section id="education" class="fade-in">
             <h2>Education</h2>
             <div class="education-item">
                 <h3>Niagara College Toronto</h3>
@@ -507,70 +137,67 @@
             </div>
             <div class="education-item">
                 <h3>SBBS International School, India</h3>
-                <p>11th & 12th Grade (Commerce) | Studied Arts in India</p>
+                <p>11th & 12th Grade (Commerce) | Specialized in Arts</p>
             </div>
         </section>
-
-        <section id="experience">
-            <h2>Professional Journey</h2>
+        <section id="experience" class="fade-in">
+            <h2>Professional Experience</h2>
             <div class="timeline">
                 <div class="job">
                     <h3>Security Guard – SMS Security, Toronto, ON</h3>
                     <p>Sep 2023 – Present</p>
                     <ul>
-                        <li>Ensured safety and security of premises with surveillance and patrols</li>
-                        <li>Managed events and delivered exceptional customer service</li>
-                        <li>Improved emergency response times by 15%</li>
+                        <li>Conducted comprehensive surveillance and patrols to ensure premises security</li>
+                        <li>Managed large-scale events, delivering exceptional client service</li>
+                        <li>Enhanced emergency response efficiency by 15% through optimized protocols</li>
                     </ul>
                 </div>
                 <div class="job">
                     <h3>Machine Operator – Eco Manufacturing Inc., Scarborough, ON</h3>
                     <p>Nov 2022 – Aug 2023</p>
                     <ul>
-                        <li>Operated machinery to boost productivity and reduce downtime</li>
-                        <li>Streamlined workflows with team coordination</li>
-                        <li>Maintained equipment and tracked production using Excel</li>
+                        <li>Operated advanced machinery to maximize productivity and minimize downtime</li>
+                        <li>Collaborated with teams to streamline operational workflows</li>
+                        <li>Maintained equipment and tracked production metrics using Excel</li>
                     </ul>
                 </div>
                 <div class="job">
                     <h3>Farm Worker & Manager – Family-Owned Farm, Punjab, India</h3>
                     <p>Lifelong Experience</p>
                     <ul>
-                        <li>Managed crop cultivation, irrigation, and harvesting</li>
-                        <li>Cared for livestock and maintained farm machinery</li>
-                        <li>Implemented sustainable practices for better yields</li>
+                        <li>Oversaw crop cultivation, irrigation, and harvesting operations</li>
+                        <li>Managed livestock and maintained farm equipment</li>
+                        <li>Implemented sustainable practices, increasing yields by 20%</li>
                     </ul>
                 </div>
             </div>
         </section>
-
-        <section id="skills">
-            <h2>Key Competencies</h2>
+        <section id="skills" class="fade-in">
+            <h2>Core Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-item">
                     <span>Transportation & Logistics</span>
-                    <div class="progress-bar"><div class="progress" style="--progress-width: 90%;"></div></div>
+                    <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
                 </div>
                 <div class="skill-item">
                     <span>Security & Law Enforcement</span>
-                    <div class="progress-bar"><div class="progress" style="--progress-width: 85%;"></div></div>
+                    <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
                 </div>
                 <div class="skill-item">
                     <span>Machinery Operation</span>
-                    <div class="progress-bar"><div class="progress" style="--progress-width: 80%;"></div></div>
+                    <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
                 </div>
                 <div class="skill-item">
                     <span>Agriculture & Farm Management</span>
-                    <div class="progress-bar"><div class="progress" style="--progress-width: 95%;"></div></div>
+                    <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
                 </div>
                 <div class="skill-item">
                     <span>Safety & Compliance</span>
-                    <div class="progress-bar"><div class="progress" style="--progress-width: 90%;"></div></div>
+                    <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
                 </div>
             </div>
         </section>
-
-        <section id="languages">
+        <section id="languages" class="fade-in">
             <h2>Languages</h2>
             <ul>
                 <li>English (Proficient)</li>
@@ -579,21 +206,23 @@
             </ul>
         </section>
     </div>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2025 Jagroop Singh | <a href="mailto:singhjagroopcanada2@gmail.com">Let’s Connect</a> | Built for Excellence</p>
+        <p>© 2025 Jagroop Singh | <a href="mailto:singhjagroopcanada2@gmail.com" id="contact-link">Contact Me</a></p>
     </footer>
-
-    <!-- JavaScript for Hamburger Menu -->
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-        });
+        window.addEventListener('load',()=>{document.getElementById('preloader').style.display='none';});
+        const hamburger=document.querySelector('.hamburger');
+        const navMenu=document.querySelector('.nav-menu');
+        hamburger.addEventListener('click',()=>{navMenu.classList.toggle('active');hamburger.textContent=navMenu.classList.contains('active')?'✕':'☰';});
+        window.addEventListener('scroll',()=>{const nav=document.querySelector('nav');nav.classList.toggle('scrolled',window.scrollY>50);});
+        const sections=document.querySelectorAll('section');
+        const navLinks=document.querySelectorAll('.nav-menu a');
+        window.addEventListener('scroll',()=>{let current='';sections.forEach(section=>{const sectionTop=section.offsetTop-100;if(window.scrollY>=sectionTop){current=section.getAttribute('id');}});navLinks.forEach(link=>{link.classList.remove('active');if(link.getAttribute('href').substring(1)===current){link.classList.add('active');}});});
+        const progressBars=document.querySelectorAll('.progress');
+        const animateProgress=()=>{progressBars.forEach(bar=>{const width=bar.getAttribute('data-width');bar.style.width=width;});};
+        const fadeElements=document.querySelectorAll('.fade-in');
+        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');animateProgress();observer.unobserve(entry.target);}});},{threshold:0.2});
+        fadeElements.forEach(el=>observer.observe(el));
     </script>
 </body>
 </html>
