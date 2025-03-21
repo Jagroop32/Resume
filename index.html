@@ -3,226 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jagroop Singh - Multi-Skilled Professional in Transportation, Security, and Agriculture based in Scarborough, ON.">
+    <meta name="description" content="Jagroop Singh - A Journey Through Transportation, Security, and Agriculture Expertise.">
     <meta name="keywords" content="Jagroop Singh, transportation, security, agriculture, AZ License, Scarborough, Ontario">
     <meta name="author" content="Jagroop Singh">
-    <title>Jagroop Singh | Multi-Skilled Professional</title>
+    <title>Jagroop Singh | The Expedition</title>
     <link rel="icon" href="https://via.placeholder.com/32" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth;}
-        body{background:#f8f9fa;color:#4a4a4a;line-height:1.6;overflow-x:hidden;}
-        #preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#2d2d2d;display:flex;align-items:center;justify-content:center;z-index:3000;}
-        #preloader span{font-size:1.5rem;color:#d4af37;font-weight:600;animation:pulse 1.5s infinite;}
-        @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
-        nav{background:#2d2d2d;padding:1.5rem 2rem;position:sticky;top:0;z-index:1000;box-shadow:0 2px 15px rgba(0,0,0,0.1);transition:background 0.3s ease;}
-        nav.scrolled{background:rgba(45,45,45,0.95);}
-        .nav-container{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
-        .nav-brand{color:#d4af37;font-size:1.8rem;font-weight:700;text-decoration:none;letter-spacing:1px;}
-        .nav-menu{display:flex;list-style:none;gap:2.5rem;}
-        .nav-menu li a{color:#fff;text-decoration:none;font-size:1rem;font-weight:400;text-transform:uppercase;letter-spacing:1px;position:relative;transition:color 0.3s ease;}
-        .nav-menu li a::after{content:'';position:absolute;width:0;height:2px;background:#d4af37;bottom:-5px;left:0;transition:width 0.3s ease;}
-        .nav-menu li a:hover::after,.nav-menu li a.active::after{width:100%;}
-        .nav-menu li a:hover,.nav-menu li a.active{color:#d4af37;}
-        .hamburger{display:none;font-size:1.8rem;color:#fff;background:none;border:none;cursor:pointer;}
-        .hero{height:100vh;background:url('https://source.unsplash.com/1600x900/?professional,modern') no-repeat center/cover fixed;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative;}
-        .hero img{loading:lazy;}
-        .hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(45,45,45,0.85),rgba(212,175,55,0.2));z-index:1;}
-        .hero-content{z-index:2;padding:2rem;max-width:800px;}
-        .hero h1{font-size:4.5rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;}
-        .hero p{font-size:1.5rem;font-weight:300;margin:1rem 0;}
-        .hero .cta{display:inline-block;padding:1rem 2.5rem;background:#d4af37;color:#2d2d2d;text-decoration:none;border-radius:5px;font-size:1.2rem;font-weight:600;transition:all 0.3s ease;}
-        .hero .cta:hover{background:#b8962e;transform:translateY(-3px);box-shadow:0 5px 15px rgba(212,175,55,0.4);}
-        .container{max-width:1280px;margin:0 auto;padding:5rem 2rem;}
-        section{background:#fff;padding:3.5rem;margin:2rem 0;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.05);transition:transform 0.3s ease;}
-        section:hover{transform:translateY(-5px);}
-        h2{color:#2d2d2d;font-size:2.5rem;font-weight:600;margin-bottom:1.5rem;position:relative;}
-        h2::after{content:'';width:80px;height:4px;background:#d4af37;position:absolute;bottom:-10px;left:0;}
-        #summary p{font-size:1.2rem;color:#4a4a4a;max-width:700px;}
-        #certifications ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;}
-        #certifications li{font-size:1.1rem;padding:1rem 1rem 1rem 2.5rem;background:#f8f9fa;border-radius:8px;position:relative;}
-        #certifications li::before{content:"\f058";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:#d4af37;}
-        .education-item{margin-bottom:1.5rem;padding:1rem;background:#f8f9fa;border-radius:8px;}
-        .education-item h3{font-size:1.6rem;color:#2d2d2d;}
-        .education-item p{font-size:1.1rem;color:#6a6a6a;}
-        .timeline{position:relative;padding-left:2.5rem;}
-        .timeline::before{content:'';position:absolute;left:1rem;top:0;bottom:0;width:3px;background:#d4af37;}
-        .job{position:relative;margin-bottom:2rem;padding:1.5rem;background:#f8f9fa;border-radius:8px;}
-        .job::before{content:'';position:absolute;left:-1.8rem;top:2rem;width:16px;height:16px;background:#d4af37;border-radius:50%;border:3px solid #fff;}
-        .job h3{font-size:1.7rem;color:#2d2d2d;}
-        .job p{font-size:1.1rem;color:#6a6a6a;margin-bottom:1rem;}
-        .job ul li{font-size:1rem;padding-left:1.5rem;position:relative;margin-bottom:0.5rem;}
-        .job ul li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;color:#d4af37;position:absolute;left:0;top:2px;}
-        .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
-        .skill-item{margin-bottom:1rem;}
-        .skill-item span{font-size:1.1rem;font-weight:500;display:block;margin-bottom:0.5rem;color:#2d2d2d;}
-        .progress-bar{background:#e0e0e0;height:8px;border-radius:4px;overflow:hidden;}
-        .progress{height:100%;background:#d4af37;width:0;transition:width 1.5s ease-out;}
-        #languages ul{display:flex;flex-wrap:wrap;gap:1rem;}
-        #languages li{font-size:1.1rem;padding:0.5rem 1.2rem;background:#d4af37;color:#2d2d2d;border-radius:20px;transition:transform 0.3s ease;}
-        #languages li:hover{transform:translateY(-3px);}
-        footer{background:#2d2d2d;color:#fff;text-align:center;padding:2rem;font-size:1rem;margin-top:4rem;}
-        footer a{color:#d4af37;text-decoration:none;font-weight:600;transition:color 0.3s ease;}
-        footer a:hover{color:#b8962e;}
-        .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
-        .fade-in.visible{opacity:1;transform:translateY(0);}
-        @media (max-width:768px){.nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:#2d2d2d;padding:1.5rem;gap:1rem;}
-        .nav-menu.active{display:flex;}
-        .hamburger{display:block;}
-        .hero h1{font-size:3rem;}
-        .hero p{font-size:1.2rem;}
-        .hero .cta{padding:0.8rem 2rem;font-size:1rem;}
-        .container{padding:3rem 1rem;}
-        section{padding:2rem;}
-        h2{font-size:2rem;}
-        .timeline::before{left:0.5rem;}
-        .job::before{left:-1.2rem;}}
-        @media (max-width:480px){.hero h1{font-size:2rem;}
-        .hero p{font-size:1rem;}
-        section{padding:1.5rem;}
-        h2{font-size:1.6rem;}
-        .job h3{font-size:1.4rem;}}
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background: #1c2526; color: #e6e6e6; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+        /* Preloader */
+        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1c2526; display: flex; align-items: center; justify-content: center; z-index: 5000; transition: opacity 1s ease; }
+        #preloader.hidden { opacity: 0; pointer-events: none; }
+        .compass { width: 100px; height: 100px; border: 4px solid #ff6f61; border-radius: 50%; position: relative; animation: rotateCompass 2s infinite linear; }
+        .compass::before { content: '\f14e'; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 3rem; color: #ff6f61; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        @keyframes rotateCompass { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; left: 0; width: 100%; padding: 2rem 5rem; z-index: 1000; display: flex; justify-content: space-between; align-items: center; background: rgba(28, 37, 38, 0.8); backdrop-filter: blur(10px); transition: background 0.3s ease; }
+        nav.scrolled { background: rgba(28, 37, 38, 0.95); }
+        .nav-brand { font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700; color: #ff6f61; text-transform: uppercase; letter-spacing: 2px; }
+        .nav-toggle { display: none; font-size: 2.5rem; color: #ff6f61; background: none; border: none; cursor: pointer; }
+        .nav-paths { display: flex; gap: 3rem; }
+        .nav-paths a { font-family: 'Cinzel', serif; color: #e6e6e6; text-decoration: none; font-size: 1.2rem; font-weight: 400; position: relative; transition: color 0.3s ease; }
+        .nav-paths a::after { content: ''; position: absolute; width: 0; height: 2px; background: #ff6f61; bottom: -8px; left: 0; transition: width 0.3s ease; }
+        .nav-paths a:hover::after, .nav-paths a.active::after { width: 100%; }
+        .nav-paths a:hover, .nav-paths a.active { color: #ff6f61; }
+
+        /* Journey Sections */
+        .journey { min-height: 100vh; position: relative; padding: 10rem 5rem; display: flex; align-items: center; justify-content: center; }
+        .journey::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(28, 37, 38, 0.6); z-index: -1; }
+        .journey-canvas { max-width: 1400px; width: 100%; margin: 0 auto; position: relative; }
+
+        /* Welcome */
+        #welcome { background: url('https://source.unsplash.com/1920x1080/?adventure') no-repeat center/cover fixed; }
+        .welcome-text { text-align: center; animation: emerge 1.5s ease-out forwards; }
+        .welcome-text h1 { font-family: 'Cinzel', serif; font-size: 6rem; font-weight: 700; color: #ff6f61; text-transform: uppercase; letter-spacing: 4px; text-shadow: 0 5px 20px rgba(255, 111, 97, 0.5); }
+        .welcome-text p { font-size: 2rem; font-weight: 300; color: #e6e6e6; margin: 2rem 0; }
+        .welcome-text .explore { padding: 1.5rem 4rem; background: #ff6f61; color: #1c2526; font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700; text-decoration: none; border-radius: 10px; display: inline-block; transition: all 0.4s ease; }
+        .welcome-text .explore:hover { background: #e65b50; transform: scale(1.05); box-shadow: 0 10px 30px rgba(255, 111, 97, 0.6); }
+
+        /* Chapter Styles */
+        .chapter { background: rgba(40, 50, 51, 0.9); padding: 5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 111, 97, 0.1); opacity: 0; transition: opacity 0.5s ease; }
+        .chapter.visible { opacity: 1; animation: slideUp 1s ease-out forwards; }
+        .chapter-title { font-family: 'Cinzel', serif; font-size: 3.5rem; font-weight: 700; color: #ff6f61; margin-bottom: 2rem; text-align: center; }
+        .chapter-content { font-size: 1.3rem; color: #e6e6e6; max-width: 1000px; margin: 0 auto; text-align: center; }
+
+        /* Artifacts (Cards) */
+        .artifacts { display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; }
+        .artifact { flex: 1; min-width: 300px; max-width: 400px; background: rgba(50, 60, 61, 0.9); padding: 3rem; border-radius: 15px; border: 2px solid #ff6f61; transition: all 0.3s ease; }
+        .artifact:hover { background: rgba(60, 70, 71, 1); box-shadow: 0 0 30px rgba(255, 111, 97, 0.4); transform: translateY(-10px); }
+        .artifact h3 { font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 700; color: #ff6f61; margin-bottom: 1.5rem; }
+        .artifact p, .artifact ul { font-size: 1.2rem; color: #e6e6e6; }
+        .artifact ul { list-style: none; padding: 0; }
+        .artifact ul li { position: relative; padding-left: 2rem; margin-bottom: 1rem; }
+        .artifact ul li::before { content: "\f51e"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #ff6f61; position: absolute; left: 0; top: 2px; }
+
+        /* Skills Map */
+        .skills-map { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .skill-orb { background: radial-gradient(circle, rgba(255, 111, 97, 0.2), rgba(50, 60, 61, 0.9)); padding: 2rem; border-radius: 50%; text-align: center; transition: all 0.3s ease; }
+        .skill-orb:hover { background: radial-gradient(circle, rgba(255, 111, 97, 0.4), rgba(60, 70, 71, 1)); transform: scale(1.1); box-shadow: 0 0 25px rgba(255, 111, 97, 0.5); }
+        .skill-orb i { font-size: 3rem; color: #ff6f61; margin-bottom: 1rem; }
+        .skill-orb span { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700; color: #ff6f61; display: block; }
+        .skill-orb p { font-size: 1.1rem; color: #e6e6e6; margin-top: 0.5rem; }
+
+        /* Languages */
+        .language-tomes { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+        .tome { padding: 1.5rem 3rem; background: #ff6f61; color: #1c2526; font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 700; border-radius: 10px; transition: all 0.3s ease; }
+        .tome:hover { background: #e65b50; transform: rotate(5deg) scale(1.05); box-shadow: 0 0 20px rgba(255, 111, 97, 0.6); }
+
+        /* Footer */
+        footer { background: #1c2526; padding: 6rem 4rem; text-align: center; border-top: 2px solid #ff6f61; }
+        .footer-scroll { max-width: 1200px; margin: 0 auto; }
+        .footer-scroll p { font-size: 1.5rem; margin-bottom: 2rem; }
+        .footer-scroll a { color: #ff6f61; text-decoration: none; transition: color 0.3s ease; }
+        .footer-scroll a:hover { color: #e65b50; text-decoration: underline; }
+        .social-relics a { color: #ff6f61; font-size: 2.5rem; margin: 0 1.5rem; transition: all 0.3s ease; }
+        .social-relics a:hover { color: #e65b50; transform: scale(1.2); }
+
+        /* Animations */
+        @keyframes emerge { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(100px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav { padding: 1.5rem 3rem; }
+            .nav-toggle { display: block; }
+            .nav-paths { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(28, 37, 38, 0.9); padding: 2rem; gap: 2rem; }
+            .nav-paths.active { display: flex; }
+            .journey { padding: 8rem 2rem; }
+            #welcome h1 { font-size: 4rem; }
+            #welcome p { font-size: 1.6rem; }
+            .welcome-text .explore { padding: 1.2rem 3rem; font-size: 1.3rem; }
+            .chapter { padding: 4rem 2rem; }
+            .chapter-title { font-size: 2.5rem; }
+            .artifacts { flex-direction: column; align-items: center; }
+            .artifact { min-width: unset; width: 100%; max-width: 100%; }
+            .skills-map { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            nav { padding: 1rem 2rem; }
+            .nav-brand { font-size: 2rem; }
+            #welcome h1 { font-size: 2.8rem; }
+            #welcome p { font-size: 1.3rem; }
+            .welcome-text .explore { padding: 1rem 2.5rem; font-size: 1.1rem; }
+            .journey { padding: 6rem 1.5rem; }
+            .chapter { padding: 3rem 1.5rem; }
+            .chapter-title { font-size: 2rem; }
+            .chapter-content { font-size: 1.2rem; }
+            .artifact h3 { font-size: 1.7rem; }
+            .artifact p, .artifact ul { font-size: 1.1rem; }
+            .skill-orb span { font-size: 1.3rem; }
+            .skill-orb p { font-size: 1rem; }
+            .tome { font-size: 1.2rem; padding: 1.2rem 2.5rem; }
+            .footer-scroll p { font-size: 1.3rem; }
+            .social-relics a { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <div id="preloader"><span>Loading...</span></div>
+    <div id="preloader"><div class="compass"></div></div>
     <nav aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="#" class="nav-brand">Jagroop Singh</a>
-            <button class="hamburger" aria-label="Toggle Menu">☰</button>
-            <ul class="nav-menu">
-                <li><a href="#summary">Summary</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#languages">Languages</a></li>
-            </ul>
+        <div class="nav-brand">Jagroop Singh</div>
+        <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+        <div class="nav-paths">
+            <a href="#welcome">Welcome</a>
+            <a href="#summary">Summary</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#languages">Languages</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Jagroop Singh</h1>
-            <p>Multi-Skilled Professional in Transportation, Security & Agriculture</p>
-            <p>Scarborough, ON | <a href="mailto:singhjagroopcanada2@gmail.com" style="color:#d4af37;">singhjagroopcanada2@gmail.com</a></p>
-            <a href="#summary" class="cta">Explore My Profile</a>
+    <section id="welcome" class="journey">
+        <div class="journey-canvas">
+            <div class="welcome-text">
+                <h1>The Expedition Begins</h1>
+                <p>Jagroop Singh: Explorer of Transportation, Security, and Agriculture</p>
+                <a href="#summary" class="explore">Embark on the Journey</a>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <section id="summary" class="fade-in">
-            <h2>Professional Summary</h2>
-            <p>A results-oriented professional with a proven track record in transportation, security, machine operation, logistics, and agriculture. With extensive experience managing farm operations in Punjab and securing urban environments in Toronto, I bring a strategic blend of technical expertise, operational leadership, and a commitment to safety and efficiency. Certified with an AZ License, OACP Certificate, and more, I excel in optimizing processes and delivering measurable outcomes.</p>
-        </section>
-        <section id="certifications" class="fade-in">
-            <h2>Certifications & Licenses</h2>
-            <ul>
-                <li>AZ License (Ontario)</li>
-                <li>Ontario Association of Chiefs of Police (OACP) Certificate</li>
-                <li>Forklift License – 4+ Years of Experience</li>
-                <li>WHMIS & OSHA Certification</li>
-                <li>CPR & First Aid Certification – 2 Years of Experience</li>
-                <li>Traffic Control Certification</li>
-                <li>Ontario Security Guard License</li>
-                <li>Ontario Class GZ Driver’s License – 2 Years of Experience</li>
-                <li>Municipal Law Enforcement Officer (MLEO) Certificate</li>
-                <li>Air Brake Endorsement</li>
-            </ul>
-        </section>
-        <section id="education" class="fade-in">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Niagara College Toronto</h3>
-                <p>Diploma in Business | Sept 2022 – Apr 2024</p>
-            </div>
-            <div class="education-item">
-                <h3>SBBS International School, India</h3>
-                <p>11th & 12th Grade (Commerce) | Specialized in Arts</p>
-            </div>
-        </section>
-        <section id="experience" class="fade-in">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <div class="job">
-                    <h3>Security Guard – SMS Security, Toronto, ON</h3>
-                    <p>Sep 2023 – Present</p>
-                    <ul>
-                        <li>Conducted comprehensive surveillance and patrols to ensure premises security</li>
-                        <li>Managed large-scale events, delivering exceptional client service</li>
-                        <li>Enhanced emergency response efficiency by 15% through optimized protocols</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Machine Operator – Eco Manufacturing Inc., Scarborough, ON</h3>
-                    <p>Nov 2022 – Aug 2023</p>
-                    <ul>
-                        <li>Operated advanced machinery to maximize productivity and minimize downtime</li>
-                        <li>Collaborated with teams to streamline operational workflows</li>
-                        <li>Maintained equipment and tracked production metrics using Excel</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Farm Worker & Manager – Family-Owned Farm, Punjab, India</h3>
-                    <p>Lifelong Experience</p>
-                    <ul>
-                        <li>Oversaw crop cultivation, irrigation, and harvesting operations</li>
-                        <li>Managed livestock and maintained farm equipment</li>
-                        <li>Implemented sustainable practices, increasing yields by 20%</li>
-                    </ul>
+    </section>
+    <section id="summary" class="journey">
+        <div class="journey-canvas">
+            <div class="chapter">
+                <h2 class="chapter-title">Chapter I: The Mission</h2>
+                <div class="chapter-content">
+                    A seasoned adventurer with a legacy in transportation, security, machine operation, logistics, and agriculture. From the fertile fields of Punjab to the urban frontiers of Toronto, I wield a unique arsenal of skills—blending technical mastery, strategic leadership, and an unwavering dedication to safety and efficiency. Armed with an AZ License, OACP Certificate, and beyond, I conquer challenges and forge paths of excellence.
                 </div>
             </div>
-        </section>
-        <section id="skills" class="fade-in">
-            <h2>Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <span>Transportation & Logistics</span>
-                    <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Security & Law Enforcement</span>
-                    <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Machinery Operation</span>
-                    <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Agriculture & Farm Management</span>
-                    <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Safety & Compliance</span>
-                    <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+        </div>
+    </section>
+    <section id="certifications" class="journey">
+        <div class="journey-canvas">
+            <div class="chapter">
+                <h2 class="chapter-title">Chapter II: Relics of Mastery</h2>
+                <div class="artifacts">
+                    <div class="artifact"><h3>AZ License (Ontario)</h3></div>
+                    <div class="artifact"><h3>Ontario Association of Chiefs of Police (OACP) Certificate</h3></div>
+                    <div class="artifact"><h3>Forklift License</h3><p>4+ Years of Experience</p></div>
+                    <div class="artifact"><h3>WHMIS & OSHA Certification</h3></div>
+                    <div class="artifact"><h3>CPR & First Aid Certification</h3><p>2 Years of Experience</p></div>
+                    <div class="artifact"><h3>Traffic Control Certification</h3></div>
+                    <div class="artifact"><h3>Ontario Security Guard License</h3></div>
+                    <div class="artifact"><h3>Ontario Class GZ Driver’s License</h3><p>2 Years of Experience</p></div>
+                    <div class="artifact"><h3>Municipal Law Enforcement Officer (MLEO) Certificate</h3></div>
+                    <div class="artifact"><h3>Air Brake Endorsement</h3></div>
                 </div>
             </div>
-        </section>
-        <section id="languages" class="fade-in">
-            <h2>Languages</h2>
-            <ul>
-                <li>English (Proficient)</li>
-                <li>Punjabi (Fluent)</li>
-                <li>Hindi (Fluent)</li>
-            </ul>
-        </section>
-    </div>
-    <footer>
-        <p>© 2025 Jagroop Singh | <a href="mailto:singhjagroopcanada2@gmail.com" id="contact-link">Contact Me</a></p>
+        </div>
+    </section>
+    <section id="education" class="journey">
+        <div class="journey-canvas">
+            <div class="chapter">
+                <h2 class="chapter-title">Chapter III: Tomes of Wisdom</h2>
+                <div class="artifacts">
+                    <div class="artifact">
+                        <h3>Niagara College Toronto</h3>
+                        <p>Diploma in Business | Sept 2022 – Apr 2024</p>
+                    </div>
+                    <div class="artifact">
+                        <h3>SBBS International School, India</h3>
+                        <p>11th & 12th Grade (Commerce) | Specialized in Arts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="journey">
+        <div class="journey-canvas">
+            <div class="chapter">
+                <h2 class="chapter-title">Chapter IV: Chronicles of Valor</h2>
+                <div class="artifacts">
+                    <div class="artifact">
+                        <h3>Security Guard – SMS Security, Toronto, ON</h3>
+                        <p>Sep 2023 – Present</p>
+                        <ul>
+                            <li>Conducted comprehensive surveillance and patrols to ensure premises security</li>
+                            <li>Managed large-scale events, delivering exceptional client service</li>
+                            <li>Enhanced emergency response efficiency by 15% through optimized protocols</li>
+                        </ul>
+                    </div>
+                    <div class="artifact">
+                        <h3>Machine Operator – Eco Manufacturing Inc., Scarborough, ON</h3>
+                        <p>Nov 2022 – Aug 2023</p>
+                        <ul>
+                            <li>Operated advanced machinery to maximize productivity and minimize downtime</li>
+                            <li>Collaborated with teams to streamline operational workflows</li>
+                            <li>Maintained equipment and tracked production metrics using Excel</li>
+                        </ul>
+                    </div>
+                    <div class="artifact">
+                        <h3>Farm Worker & Manager – Family-Owned Farm, Punjab, India</h3>
+                        <p>Lifelong Experience</p>
+                        <ul>
+                            <li>Oversaw crop cultivation, irrigation, and harvesting operations</li>
+                            <li>Managed livestock and maintained farm equipment</li>
+                            <li>Implemented sustainable practices, increasing yields by 20%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="journey">
+        <div class="journey-canvas">
+            <div class="chapter">
+                <h2 class="chapter-title">Chapter V: The Skill Forge</h2>
+                <div class="skills-map">
+                    <div class="skill-orb">
+                        <i class="fas fa-truck"></i>
+                        <span>Transportation & Logistics</span>
+                        <p>Mastery of driving and logistics orchestration</p>
+                    </div>
+                    <div class="skill-orb">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security & Law Enforcement</span>
+                        <p>Guardian of safety with expert surveillance</p>
+                    </div>
+                    <div class="skill-orb">
+                        <i class="fas fa-tools"></i>
+                        <span>Machinery Operation</span>
+                        <p>Precision in wielding advanced tools</p>
+                    </div>
+                    <div class="skill-orb">
+                        <i class="fas fa-tractor"></i>
+                        <span>Agriculture & Farm Management</span>
+                        <p>Legacy of cultivating abundance</p>
+                    </div>
+                    <div class="skill-orb">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Safety & Compliance</span>
+                        <p>Upholding the highest standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="languages" class="journey">
+        <div class="journey-canvas">
+            <div class="chapter">
+                <h2 class="chapter-title">Chapter VI: Tongues of the Realm</h2>
+                <div class="language-tomes">
+                    <div class="tome">English (Proficient)</div>
+                    <div class="tome">Punjabi (Fluent)</div>
+                    <div class="tome">Hindi (Fluent)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" aria-label="Contact Information">
+        <div class="footer-scroll">
+            <p>The Saga Continues | ©️ 2025 Jagroop Singh | Scarborough, ON | <a href="mailto:singhjagroopcanada2@gmail.com">singhjagroopcanada2@gmail.com</a></p>
+            <div class="social-relics">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:singhjagroopcanada2@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
     <script>
-        window.addEventListener('load',()=>{document.getElementById('preloader').style.display='none';});
-        const hamburger=document.querySelector('.hamburger');
-        const navMenu=document.querySelector('.nav-menu');
-        hamburger.addEventListener('click',()=>{navMenu.classList.toggle('active');hamburger.textContent=navMenu.classList.contains('active')?'✕':'☰';});
-        window.addEventListener('scroll',()=>{const nav=document.querySelector('nav');nav.classList.toggle('scrolled',window.scrollY>50);});
-        const sections=document.querySelectorAll('section');
-        const navLinks=document.querySelectorAll('.nav-menu a');
-        window.addEventListener('scroll',()=>{let current='';sections.forEach(section=>{const sectionTop=section.offsetTop-100;if(window.scrollY>=sectionTop){current=section.getAttribute('id');}});navLinks.forEach(link=>{link.classList.remove('active');if(link.getAttribute('href').substring(1)===current){link.classList.add('active');}});});
-        const progressBars=document.querySelectorAll('.progress');
-        const animateProgress=()=>{progressBars.forEach(bar=>{const width=bar.getAttribute('data-width');bar.style.width=width;});};
-        const fadeElements=document.querySelectorAll('.fade-in');
-        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');animateProgress();observer.unobserve(entry.target);}});},{threshold:0.2});
-        fadeElements.forEach(el=>observer.observe(el));
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 1000);
+        });
+
+        // Navigation Toggle
+        const toggle = document.querySelector('.nav-toggle');
+        const paths = document.querySelector('.nav-paths');
+        toggle.addEventListener('click', () => {
+            paths.classList.toggle('active');
+            toggle.textContent = paths.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Scroll Effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+
+            const sections = document.querySelectorAll('.journey');
+            const navLinks = document.querySelectorAll('.nav-paths a');
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 100;
+                const height = section.offsetHeight;
+                if (window.scrollY >= top && window.scrollY < top + height) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Chapter Visibility
+            const chapters = document.querySelectorAll('.chapter');
+            chapters.forEach(chapter => {
+                const rect = chapter.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                    chapter.classList.add('visible');
+                }
+            });
+        });
+
+        // Ensure initial visibility check on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const chapters = document.querySelectorAll('.chapter');
+            chapters.forEach(chapter => {
+                const rect = chapter.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    chapter.classList.add('visible');
+                }
+            });
+        });
     </script>
 </body>
 </html>
