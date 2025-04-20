@@ -3,286 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jagroop Singh - A Journey Through Transportation, Security, and Agriculture Expertise.">
-    <meta name="keywords" content="Jagroop Singh, transportation, security, agriculture, AZ License, Scarborough, Ontario">
+    <meta name="description" content="Jagroop Singh - Qualified Candidate for TTC Transit Operator Role with Expertise in Safe Driving, Customer Service, and GTA Navigation.">
+    <meta name="keywords" content="Jagroop Singh, TTC, Transit Operator, transportation, customer service, safe driving, Toronto, Ontario">
     <meta name="author" content="Jagroop Singh">
-    <title>Jagroop Singh | The Expedition</title>
-    <link rel="icon" href="https://via.placeholder.com/32" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <title>Jagroop Singh | TTC Transit Operator Candidate</title>
+    <link rel="icon" href="https://www.ttc.ca/Content/ttc/images/ttc-logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background: #1c2526; color: #e6e6e6; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        body { background: #f4f4f4; color: #333; font-family: 'Roboto', sans-serif; overflow-x: hidden; }
 
         /* Preloader */
-        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1c2526; display: flex; align-items: center; justify-content: center; z-index: 5000; transition: opacity 1s ease; }
+        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #D41F30; display: flex; align-items: center; justify-content: center; z-index: 5000; transition: opacity 0.8s ease; }
         #preloader.hidden { opacity: 0; pointer-events: none; }
-        .compass { width: 100px; height: 100px; border: 4px solid #ff6f61; border-radius: 50%; position: relative; animation: rotateCompass 2s infinite linear; }
-        .compass::before { content: '\f14e'; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 3rem; color: #ff6f61; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-        @keyframes rotateCompass { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .preloader-icon { width: 60px; height: 60px; border: 4px solid #FFFFFF; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
         /* Navigation */
-        nav { position: fixed; top: 0; left: 0; width: 100%; padding: 2rem 5rem; z-index: 1000; display: flex; justify-content: space-between; align-items: center; background: rgba(28, 37, 38, 0.8); backdrop-filter: blur(10px); transition: background 0.3s ease; }
-        nav.scrolled { background: rgba(28, 37, 38, 0.95); }
-        .nav-brand { font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700; color: #ff6f61; text-transform: uppercase; letter-spacing: 2px; }
-        .nav-toggle { display: none; font-size: 2.5rem; color: #ff6f61; background: none; border: none; cursor: pointer; }
-        .nav-paths { display: flex; gap: 3rem; }
-        .nav-paths a { font-family: 'Cinzel', serif; color: #e6e6e6; text-decoration: none; font-size: 1.2rem; font-weight: 400; position: relative; transition: color 0.3s ease; }
-        .nav-paths a::after { content: ''; position: absolute; width: 0; height: 2px; background: #ff6f61; bottom: -8px; left: 0; transition: width 0.3s ease; }
-        .nav-paths a:hover::after, .nav-paths a.active::after { width: 100%; }
-        .nav-paths a:hover, .nav-paths a.active { color: #ff6f61; }
+        nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; background: #FFFFFF; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        nav.scrolled { background: #D41F30; color: #FFFFFF; }
+        nav.scrolled a, nav.scrolled .nav-brand { color: #FFFFFF; }
+        .nav-brand { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 600; color: #D41F30; }
+        .nav-toggle { display: none; font-size: 1.8rem; color: #D41F30; background: none; border: none; cursor: pointer; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-family: 'Roboto', sans-serif; font-size: 1.1rem; color: #333; text-decoration: none; font-weight: 500; position: relative; transition: color 0.3s ease; }
+        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; background: #D41F30; bottom: -5px; left: 0; transition: width 0.3s ease; }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: #D41F30; }
 
-        /* Journey Sections */
-        .journey { min-height: 100vh; position: relative; padding: 10rem 5rem; display: flex; align-items: center; justify-content: center; }
-        .journey::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(28, 37, 38, 0.6); z-index: -1; }
-        .journey-canvas { max-width: 1400px; width: 100%; margin: 0 auto; position: relative; }
+        /* Sections */
+        .section { min-height: 100vh; padding: 8rem 3rem; display: flex; align-items: center; justify-content: center; background: url('https://source.unsplash.com/1920x1080/?transit,toronto') no-repeat center/cover fixed; }
+        .section-content { max-width: 1200px; width: 100%; background: rgba(255,255,255,0.95); padding: 3rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section-title { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 600; color: #D41F30; margin-bottom: 2rem; text-align: center; }
+        .section-text { font-size: 1.1rem; line-height: 1.8; color: #333; text-align: center; }
 
-        /* Welcome */
-        #welcome { background: url('https://source.unsplash.com/1920x1080/?adventure') no-repeat center/cover fixed; }
-        .welcome-text { text-align: center; animation: emerge 1.5s ease-out forwards; }
-        .welcome-text h1 { font-family: 'Cinzel', serif; font-size: 6rem; font-weight: 700; color: #ff6f61; text-transform: uppercase; letter-spacing: 4px; text-shadow: 0 5px 20px rgba(255, 111, 97, 0.5); }
-        .welcome-text p { font-size: 2rem; font-weight: 300; color: #e6e6e6; margin: 2rem 0; }
-        .welcome-text .explore { padding: 1.5rem 4rem; background: #ff6f61; color: #1c2526; font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700; text-decoration: none; border-radius: 10px; display: inline-block; transition: all 0.4s ease; }
-        .welcome-text .explore:hover { background: #e65b50; transform: scale(1.05); box-shadow: 0 10px 30px rgba(255, 111, 97, 0.6); }
+        /* Welcome Section */
+        #welcome .section-content { text-align: center; }
+        #welcome h1 { font-size: 4rem; color: #D41F30; margin-bottom: 1rem; }
+        #welcome p { font-size: 1.5rem; margin-bottom: 2rem; }
+        #welcome .cta-button { padding: 1rem 2.5rem; background: #D41F30; color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; text-decoration: none; border-radius: 5px; transition: background 0.3s ease; }
+        #welcome .cta-button:hover { background: #b01825; }
 
-        /* Chapter Styles */
-        .chapter { background: rgba(40, 50, 51, 0.9); padding: 5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(255, 111, 97, 0.1); opacity: 0; transition: opacity 0.5s ease; }
-        .chapter.visible { opacity: 1; animation: slideUp 1s ease-out forwards; }
-        .chapter-title { font-family: 'Cinzel', serif; font-size: 3.5rem; font-weight: 700; color: #ff6f61; margin-bottom: 2rem; text-align: center; }
-        .chapter-content { font-size: 1.3rem; color: #e6e6e6; max-width: 1000px; margin: 0 auto; text-align: center; }
+        /* Cards */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .card { background: #FFFFFF; padding: 2rem; border-radius: 10px; border-left: 4px solid #D41F30; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .card h3 { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; color: #D41F30; margin-bottom: 1rem; }
+        .card p, .card ul { font-size: 1rem; color: #333; }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        .card ul li::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #D41F30; position: absolute; left: 0; top: 2px; }
 
-        /* Artifacts (Cards) */
-        .artifacts { display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; }
-        .artifact { flex: 1; min-width: 300px; max-width: 400px; background: rgba(50, 60, 61, 0.9); padding: 3rem; border-radius: 15px; border: 2px solid #ff6f61; transition: all 0.3s ease; }
-        .artifact:hover { background: rgba(60, 70, 71, 1); box-shadow: 0 0 30px rgba(255, 111, 97, 0.4); transform: translateY(-10px); }
-        .artifact h3 { font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 700; color: #ff6f61; margin-bottom: 1.5rem; }
-        .artifact p, .artifact ul { font-size: 1.2rem; color: #e6e6e6; }
-        .artifact ul { list-style: none; padding: 0; }
-        .artifact ul li { position: relative; padding-left: 2rem; margin-bottom: 1rem; }
-        .artifact ul li::before { content: "\f51e"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #ff6f61; position: absolute; left: 0; top: 2px; }
-
-        /* Skills Map */
-        .skills-map { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .skill-orb { background: radial-gradient(circle, rgba(255, 111, 97, 0.2), rgba(50, 60, 61, 0.9)); padding: 2rem; border-radius: 50%; text-align: center; transition: all 0.3s ease; }
-        .skill-orb:hover { background: radial-gradient(circle, rgba(255, 111, 97, 0.4), rgba(60, 70, 71, 1)); transform: scale(1.1); box-shadow: 0 0 25px rgba(255, 111, 97, 0.5); }
-        .skill-orb i { font-size: 3rem; color: #ff6f61; margin-bottom: 1rem; }
-        .skill-orb span { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700; color: #ff6f61; display: block; }
-        .skill-orb p { font-size: 1.1rem; color: #e6e6e6; margin-top: 0.5rem; }
-
-        /* Languages */
-        .language-tomes { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
-        .tome { padding: 1.5rem 3rem; background: #ff6f61; color: #1c2526; font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 700; border-radius: 10px; transition: all 0.3s ease; }
-        .tome:hover { background: #e65b50; transform: rotate(5deg) scale(1.05); box-shadow: 0 0 20px rgba(255, 111, 97, 0.6); }
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .skill { text-align: center; padding: 1.5rem; background: #f9f9f9; border-radius: 10px; }
+        .skill i { font-size: 2.5rem; color: #D41F30; margin-bottom: 1rem; }
+        .skill h4 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; color: #333; }
+        .skill p { font-size: 0.9rem; color: #4A4A4A; }
 
         /* Footer */
-        footer { background: #1c2526; padding: 6rem 4rem; text-align: center; border-top: 2px solid #ff6f61; }
-        .footer-scroll { max-width: 1200px; margin: 0 auto; }
-        .footer-scroll p { font-size: 1.5rem; margin-bottom: 2rem; }
-        .footer-scroll a { color: #ff6f61; text-decoration: none; transition: color 0.3s ease; }
-        .footer-scroll a:hover { color: #e65b50; text-decoration: underline; }
-        .social-relics a { color: #ff6f61; font-size: 2.5rem; margin: 0 1.5rem; transition: all 0.3s ease; }
-        .social-relics a:hover { color: #e65b50; transform: scale(1.2); }
+        footer { background: #D41F30; color: #FFFFFF; padding: 3rem; text-align: center; }
+        .footer-content p { font-size: 1rem; margin-bottom: 1rem; }
+        .footer-content a { color: #FFFFFF; text-decoration: underline; transition: color 0.3s ease; }
+        .footer-content a:hover { color: #f4f4f4; }
+        .social-links a { color: #FFFFFF; font-size: 1.8rem; margin: 0 1rem; transition: color 0.3s ease; }
+        .social-links a:hover { color: #f4f4f4; }
 
         /* Animations */
-        @keyframes emerge { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(100px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .section-content { animation: fadeIn 1s ease-out forwards; }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            nav { padding: 1.5rem 3rem; }
+            nav { padding: 1rem 2rem; }
             .nav-toggle { display: block; }
-            .nav-paths { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(28, 37, 38, 0.9); padding: 2rem; gap: 2rem; }
-            .nav-paths.active { display: flex; }
-            .journey { padding: 8rem 2rem; }
-            #welcome h1 { font-size: 4rem; }
-            #welcome p { font-size: 1.6rem; }
-            .welcome-text .explore { padding: 1.2rem 3rem; font-size: 1.3rem; }
-            .chapter { padding: 4rem 2rem; }
-            .chapter-title { font-size: 2.5rem; }
-            .artifacts { flex-direction: column; align-items: center; }
-            .artifact { min-width: unset; width: 100%; max-width: 100%; }
-            .skills-map { grid-template-columns: 1fr; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #FFFFFF; padding: 1rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .nav-links a { color: #333; padding: 0.5rem 0; }
+            .section { padding: 6rem 1.5rem; }
+            #welcome h1 { font-size: 2.8rem; }
+            #welcome p { font-size: 1.2rem; }
+            .section-content { padding: 2rem; }
+            .section-title { font-size: 2rem; }
+            .cards { grid-template-columns: 1fr; }
         }
         @media (max-width: 480px) {
-            nav { padding: 1rem 2rem; }
-            .nav-brand { font-size: 2rem; }
-            #welcome h1 { font-size: 2.8rem; }
-            #welcome p { font-size: 1.3rem; }
-            .welcome-text .explore { padding: 1rem 2.5rem; font-size: 1.1rem; }
-            .journey { padding: 6rem 1.5rem; }
-            .chapter { padding: 3rem 1.5rem; }
-            .chapter-title { font-size: 2rem; }
-            .chapter-content { font-size: 1.2rem; }
-            .artifact h3 { font-size: 1.7rem; }
-            .artifact p, .artifact ul { font-size: 1.1rem; }
-            .skill-orb span { font-size: 1.3rem; }
-            .skill-orb p { font-size: 1rem; }
-            .tome { font-size: 1.2rem; padding: 1.2rem 2.5rem; }
-            .footer-scroll p { font-size: 1.3rem; }
-            .social-relics a { font-size: 2rem; }
+            nav { padding: 0.8rem 1.5rem; }
+            .nav-brand { font-size: 1.5rem; }
+            #welcome h1 { font-size: 2rem; }
+            #welcome .cta-button { padding: 0.8rem 2rem; font-size: 1rem; }
+            .section-title { font-size: 1.8rem; }
+            .section-text { font-size: 1rem; }
+            .card h3 { font-size: 1.5rem; }
+            .skill h4 { font-size: 1.1rem; }
+            .footer-content p { font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
-    <div id="preloader"><div class="compass"></div></div>
+    <div id="preloader"><div class="preloader-icon"></div></div>
     <nav aria-label="Main Navigation">
         <div class="nav-brand">Jagroop Singh</div>
         <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
-        <div class="nav-paths">
+        <div class="nav-links">
             <a href="#welcome">Welcome</a>
-            <a href="#summary">Summary</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#education">Education</a>
+            <a href="#about">About</a>
+            <a href="#qualifications">Qualifications</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
-            <a href="#languages">Languages</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
-    <section id="welcome" class="journey">
-        <div class="journey-canvas">
-            <div class="welcome-text">
-                <h1>The Expedition Begins</h1>
-                <p>Jagroop Singh: Explorer of Transportation, Security, and Agriculture</p>
-                <a href="#summary" class="explore">Embark on the Journey</a>
+    <section id="welcome" class="section">
+        <div class="section-content">
+            <h1>Your Journey with TTC Starts Here</h1>
+            <p>Jagroop Singh: Dedicated Candidate for Transit Operator with Expertise in Safe Driving, Customer Service, and GTA Navigation</p>
+            <a href="#about" class="cta-button">Explore My Qualifications</a>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-text">
+                I am a safety-conscious professional with a proven track record in transportation, customer service, and regulatory compliance, making me an ideal candidate for the TTC Transit Operator role. With an Ontario Class AZ and GZ Driver’s License, extensive knowledge of the Greater Toronto Area, and frontline customer service experience, I am prepared to deliver safe, reliable, and accessible transit services. My background in security, agriculture, and machinery operation reflects my adaptability and commitment to excellence, aligning with TTC’s mission to move Toronto towards a more equitable, sustainable, and prosperous future.
             </div>
         </div>
     </section>
-    <section id="summary" class="journey">
-        <div class="journey-canvas">
-            <div class="chapter">
-                <h2 class="chapter-title">Chapter I: The Mission</h2>
-                <div class="chapter-content">
-                    A seasoned adventurer with a legacy in transportation, security, machine operation, logistics, and agriculture. From the fertile fields of Punjab to the urban frontiers of Toronto, I wield a unique arsenal of skills—blending technical mastery, strategic leadership, and an unwavering dedication to safety and efficiency. Armed with an AZ License, OACP Certificate, and beyond, I conquer challenges and forge paths of excellence.
+    <section id="qualifications" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Qualifications</h2>
+            <div class="cards">
+                <div class="card"><h3>Ontario Class AZ License</h3><p>With Air Brake Endorsement, ensuring safe and compliant vehicle operation.</p></div>
+                <div class="card"><h3>Ontario Class GZ License</h3><p>2+ years of experience with a clean driving record.</p></div>
+                <div class="card"><h3>Municipal Law Enforcement Officer (MLEO) Certificate</h3><p>Certified in Toronto, Mississauga, Pickering, Markham, and Brampton.</p></div>
+                <div class="card"><h3>CPR & First Aid Certification</h3><p>2 years of experience in emergency response.</p></div>
+                <div class="card"><h3>Traffic Control Certification</h3><p>Skilled in managing safe traffic flow.</p></div>
+                <div class="card"><h3>WHMIS & OSHA Certification</h3><p>Ensuring workplace safety compliance.</p></div>
+                <div class="card"><h3>Ontario Security Guard License</h3><p>Trained in public safety and crisis management.</p></div>
+                <div class="card"><h3>Forklift License</h3><p>4+ years of experience in heavy machinery operation.</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Mobile Patrol Supervisor – SMS Security, Toronto, ON</h3>
+                    <p>Sep 2023 – Present</p>
+                    <ul>
+                        <li>Supervised mobile patrols across Toronto, optimizing routes to improve response time by 15%.</li>
+                        <li>Provided high-level customer service to residents and staff, assisting elderly and disabled individuals.</li>
+                        <li>Managed emergencies, issued parking tickets, and coordinated with law enforcement.</li>
+                        <li>Trained personnel on safety protocols and maintained detailed incident logs.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Farm Worker & Manager – Family-Owned Farm, Punjab, India</h3>
+                    <p>Lifelong Experience</p>
+                    <ul>
+                        <li>Operated agricultural machinery and managed crop cultivation and livestock care.</li>
+                        <li>Implemented sustainable practices, enhancing operational efficiency.</li>
+                        <li>Developed adaptability and problem-solving skills in dynamic environments.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section id="certifications" class="journey">
-        <div class="journey-canvas">
-            <div class="chapter">
-                <h2 class="chapter-title">Chapter II: Relics of Mastery</h2>
-                <div class="artifacts">
-                    <div class="artifact"><h3>AZ License (Ontario)</h3></div>
-                    <div class="artifact"><h3>Ontario Association of Chiefs of Police (OACP) Certificate</h3></div>
-                    <div class="artifact"><h3>Forklift License</h3><p>4+ Years of Experience</p></div>
-                    <div class="artifact"><h3>WHMIS & OSHA Certification</h3></div>
-                    <div class="artifact"><h3>CPR & First Aid Certification</h3><p>2 Years of Experience</p></div>
-                    <div class="artifact"><h3>Traffic Control Certification</h3></div>
-                    <div class="artifact"><h3>Ontario Security Guard License</h3></div>
-                    <div class="artifact"><h3>Ontario Class GZ Driver’s License</h3><p>2 Years of Experience</p></div>
-                    <div class="artifact"><h3>Municipal Law Enforcement Officer (MLEO) Certificate</h3></div>
-                    <div class="artifact"><h3>Air Brake Endorsement</h3></div>
+    <section id="skills" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <i class="fas fa-bus"></i>
+                    <h4>Safe Vehicle Operation</h4>
+                    <p>Expertise with AZ and GZ licenses, ensuring passenger safety.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="education" class="journey">
-        <div class="journey-canvas">
-            <div class="chapter">
-                <h2 class="chapter-title">Chapter III: Tomes of Wisdom</h2>
-                <div class="artifacts">
-                    <div class="artifact">
-                        <h3>Niagara College Toronto</h3>
-                        <p>Diploma in Business | Sept 2022 – Apr 2024</p>
-                    </div>
-                    <div class="artifact">
-                        <h3>SBBS International School, India</h3>
-                        <p>11th & 12th Grade (Commerce) | Specialized in Arts</p>
-                    </div>
+                <div class="skill">
+                    <i class="fas fa-users"></i>
+                    <h4>Customer Service</h4>
+                    <p>Frontline experience assisting diverse populations.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="experience" class="journey">
-        <div class="journey-canvas">
-            <div class="chapter">
-                <h2 class="chapter-title">Chapter IV: Chronicles of Valor</h2>
-                <div class="artifacts">
-                    <div class="artifact">
-                        <h3>Security Guard – SMS Security, Toronto, ON</h3>
-                        <p>Sep 2023 – Present</p>
-                        <ul>
-                            <li>Conducted comprehensive surveillance and patrols to ensure premises security</li>
-                            <li>Managed large-scale events, delivering exceptional client service</li>
-                            <li>Enhanced emergency response efficiency by 15% through optimized protocols</li>
-                        </ul>
-                    </div>
-                    <div class="artifact">
-                        <h3>Machine Operator – Eco Manufacturing Inc., Scarborough, ON</h3>
-                        <p>Nov 2022 – Aug 2023</p>
-                        <ul>
-                            <li>Operated advanced machinery to maximize productivity and minimize downtime</li>
-                            <li>Collaborated with teams to streamline operational workflows</li>
-                            <li>Maintained equipment and tracked production metrics using Excel</li>
-                        </ul>
-                    </div>
-                    <div class="artifact">
-                        <h3>Farm Worker & Manager – Family-Owned Farm, Punjab, India</h3>
-                        <p>Lifelong Experience</p>
-                        <ul>
-                            <li>Oversaw crop cultivation, irrigation, and harvesting operations</li>
-                            <li>Managed livestock and maintained farm equipment</li>
-                            <li>Implemented sustainable practices, increasing yields by 20%</li>
-                        </ul>
-                    </div>
+                <div class="skill">
+                    <i class="fas fa-map"></i>
+                    <h4>GTA Navigation</h4>
+                    <p>In-depth knowledge of Toronto’s roads and landmarks.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="skills" class="journey">
-        <div class="journey-canvas">
-            <div class="chapter">
-                <h2 class="chapter-title">Chapter V: The Skill Forge</h2>
-                <div class="skills-map">
-                    <div class="skill-orb">
-                        <i class="fas fa-truck"></i>
-                        <span>Transportation & Logistics</span>
-                        <p>Mastery of driving and logistics orchestration</p>
-                    </div>
-                    <div class="skill-orb">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Security & Law Enforcement</span>
-                        <p>Guardian of safety with expert surveillance</p>
-                    </div>
-                    <div class="skill-orb">
-                        <i class="fas fa-tools"></i>
-                        <span>Machinery Operation</span>
-                        <p>Precision in wielding advanced tools</p>
-                    </div>
-                    <div class="skill-orb">
-                        <i class="fas fa-tractor"></i>
-                        <span>Agriculture & Farm Management</span>
-                        <p>Legacy of cultivating abundance</p>
-                    </div>
-                    <div class="skill-orb">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Safety & Compliance</span>
-                        <p>Upholding the highest standards</p>
-                    </div>
+                <div class="skill">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Safety & Compliance</h4>
+                    <p>Adherence to MTO, WHMIS, and Human Rights Code standards.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="languages" class="journey">
-        <div class="journey-canvas">
-            <div class="chapter">
-                <h2 class="chapter-title">Chapter VI: Tongues of the Realm</h2>
-                <div class="language-tomes">
-                    <div class="tome">English (Proficient)</div>
-                    <div class="tome">Punjabi (Fluent)</div>
-                    <div class="tome">Hindi (Fluent)</div>
+                <div class="skill">
+                    <i class="fas fa-language"></i>
+                    <h4>Multilingual Communication</h4>
+                    <p>Fluent in English, Punjabi, and Hindi.</p>
                 </div>
             </div>
         </div>
     </section>
     <footer id="contact" aria-label="Contact Information">
-        <div class="footer-scroll">
-            <p>The Saga Continues | ©️ 2025 Jagroop Singh | Scarborough, ON | <a href="mailto:singhjagroopcanada2@gmail.com">singhjagroopcanada2@gmail.com</a></p>
-            <div class="social-relics">
+        <div class="footer-content">
+            <p>Contact: <a href="mailto:jagroopjhattu123@gmail.com">jagroopjhattu123@gmail.com@gmail.com</a> | Toronto, ON | ©️ 2025 Jagroop Singh</p>
+            <p>Learn more about TTC’s mission at <a href="https://www.ttc.ca/About_the_TTC/Corporate_Plan">ttc.ca</a></p>
+            <div class="social-links">
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:singhjagroopcanada2@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:jagroopjhattu123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
@@ -291,15 +219,15 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('preloader').classList.add('hidden');
-            }, 1000);
+            }, 800);
         });
 
         // Navigation Toggle
         const toggle = document.querySelector('.nav-toggle');
-        const paths = document.querySelector('.nav-paths');
+        const links = document.querySelector('.nav-links');
         toggle.addEventListener('click', () => {
-            paths.classList.toggle('active');
-            toggle.textContent = paths.classList.contains('active') ? '✕' : '☰';
+            links.classList.toggle('active');
+            toggle.textContent = links.classList.contains('active') ? '✕' : '☰';
         });
 
         // Scroll Effects
@@ -307,13 +235,12 @@
             const nav = document.querySelector('nav');
             nav.classList.toggle('scrolled', window.scrollY > 50);
 
-            const sections = document.querySelectorAll('.journey');
-            const navLinks = document.querySelectorAll('.nav-paths a');
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-links a');
             let current = '';
             sections.forEach(section => {
                 const top = section.offsetTop - 100;
-                const height = section.offsetHeight;
-                if (window.scrollY >= top && window.scrollY < top + height) {
+                if (window.scrollY >= top) {
                     current = section.getAttribute('id');
                 }
             });
@@ -321,26 +248,6 @@
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
-                }
-            });
-
-            // Chapter Visibility
-            const chapters = document.querySelectorAll('.chapter');
-            chapters.forEach(chapter => {
-                const rect = chapter.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
-                    chapter.classList.add('visible');
-                }
-            });
-        });
-
-        // Ensure initial visibility check on load
-        document.addEventListener('DOMContentLoaded', () => {
-            const chapters = document.querySelectorAll('.chapter');
-            chapters.forEach(chapter => {
-                const rect = chapter.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.8) {
-                    chapter.classList.add('visible');
                 }
             });
         });
